@@ -48,3 +48,20 @@ In "network" tab browser makes an HTTP request.
  While most of it won't apply to us, note the Remote Address, which has a value along the lines of 192.30.255.117. This happens to be the IP address for GitHub's API. Every computer or server connected to the internet has an IP address to uniquely identify it. But thanks to the Domain Naming System (or DNS), you can use a more human-readable hostname like api.github.com, and the DNS will translate it to the correct IP address on your behalf.
 
  The response is the data that the request returned. Note that the data is formatted as JSON consisting of an array of objects. It would certainly be great to have access to that array in JavaScript!
+
+ we've made an HTTP request to the GitHub API using fetch(). In turn, GitHub responded with JSON data. Remember that relationship: the request originated from the app, and the response came from GitHub's server.
+
+ Promises are newer additions to JavaScript that act like more advanced callback functions. We'll dissect Promises in greater detail down the road. For now, note that Promises have a method called then(). This method is called when the Promise has been fulfilled.
+
+ This kind of asynchronous communication with a server is often referred to as AJAX, which stands for Asynchronous JavaScript and XML. The XML in this term refers to an old-fashioned way of formatting data. XML has been largely replaced by JSON, but the name has persisted.
+
+ status property has a value of 200 (which means success)
+
+ json()
+ -method formats the response as JSON, sometimes a resource may return non-JSON data, which then text() woudl be used
+
+ the json() method returns another Promise, hence then(), method whose callback function captures the actual data.
+
+ Testing a server-side API with hardcoded values (like the Octocat username) can help us verify that the API will work at all before we get carried away with too much other logic. 
+
+  A lot of HTTP requests to server-side APIs receive responses with way more JSON data than necessary.
