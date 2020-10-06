@@ -65,3 +65,5 @@ In "network" tab browser makes an HTTP request.
  Testing a server-side API with hardcoded values (like the Octocat username) can help us verify that the API will work at all before we get carried away with too much other logic. 
 
   A lot of HTTP requests to server-side APIs receive responses with way more JSON data than necessary.
+
+  HTTP headers allow the client and the server to pass additional information with an HTTP request or response. This often includes information like whether or not to cache (locally store) data and, if so, for how long. This data goes in the headers because it's often small in file size and not directly pertinent to the content in the body of a request or response.
